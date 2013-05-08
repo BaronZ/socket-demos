@@ -4,8 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.SocketException;
-import java.net.UnknownHostException;
+
 
 /*
  * 1.建立UDP socket服务(通过DatagramSocket对象)
@@ -18,7 +17,9 @@ public class UDPsend {
 	public static void main(String[] args) throws IOException {
 		//1 创建UDP服务，通过DatagramSocket对象
 		DatagramSocket ds = new DatagramSocket();
-		//2. 确定数据，并封装成数据包。DatagramPacket(byte[] buf, int len,InetAddress add,int port);
+		//2. 确定数据，并封装成数据包。
+		//DatagramPacket(byte[] buf, int len,InetAddress add,int port);
+		//buf->data, len->data length, add->the target app's IP, port->the target app's port
 		byte[] buf = "UDP MSG".getBytes();
 		DatagramPacket dp = 
 				new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.254"),10000);
@@ -29,3 +30,8 @@ public class UDPsend {
 	}
 
 }
+
+/*
+ * 
+ * 
+ * */
