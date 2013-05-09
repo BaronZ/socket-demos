@@ -9,6 +9,7 @@ import java.net.DatagramSocket;
 　　3）通过socket服务的receive方法，将收到的数据存入已定义好的数据包中。
 　　4）通过数据包对象的特有功能，将这些不同的数据取出。
 　　5）关闭资源
+    note:need to run this .java first then run UDPsend.java to send data to this app.
 
  * 
  * */
